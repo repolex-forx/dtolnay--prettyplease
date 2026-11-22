@@ -65,6 +65,63 @@
       "ast": [
         "aggregate/ast/c971184fa8c5ef5a2828196e35bd99469455b46b/chunk-001.nq.gz",
         "aggregate/ast/c971184fa8c5ef5a2828196e35bd99469455b46b/chunk-002.nq.gz"
+      ],
+      "lsp": "aggregate/lsp/c971184fa8c5ef5a2828196e35bd99469455b46b.nq.gz",
+      "dependencies": [
+        {
+          "packageName": "proc-macro2",
+          "ecosystem": "CARGO",
+          "version": "1.0.80",
+          "githubOrg": "dtolnay",
+          "githubRepo": "proc-macro2",
+          "githubCommit": "da51f8d005cc5d8299c1872fad9bbe63b07c31c7",
+          "githubTag": "1.0.80",
+          "githubUrl": "https://github.com/dtolnay/proc-macro2",
+          "source": "build_file:Cargo.toml"
+        },
+        {
+          "packageName": "syn",
+          "ecosystem": "CARGO",
+          "version": "2.0.105",
+          "githubOrg": "dtolnay",
+          "githubRepo": "syn",
+          "githubCommit": "9a8cc49b7b17cb5d888ca299bc600f5e0ff6f4ad",
+          "githubTag": "2.0.105",
+          "githubUrl": "https://github.com/dtolnay/syn",
+          "source": "build_file:Cargo.toml"
+        },
+        {
+          "packageName": "indoc",
+          "ecosystem": "CARGO",
+          "version": "2",
+          "githubOrg": "dtolnay",
+          "githubRepo": "indoc",
+          "githubUrl": "https://github.com/dtolnay/indoc",
+          "source": "build_file:Cargo.toml"
+        },
+        {
+          "packageName": "quote",
+          "ecosystem": "CARGO",
+          "version": "1.0.35",
+          "githubOrg": "dtolnay",
+          "githubRepo": "quote",
+          "githubCommit": "b01743f24cb5b19f96a3eac6bce0e7aee10f6199",
+          "githubTag": "1.0.35",
+          "githubUrl": "https://github.com/dtolnay/quote",
+          "source": "build_file:Cargo.toml"
+        },
+        {
+          "packageName": "anyhow",
+          "ecosystem": "CARGO",
+          "version": "1.0.104",
+          "githubOrg": "dtolnay",
+          "githubRepo": "anyhow",
+          "githubCommit": "1dbe1862aae650423e3361fbd20b7d17c5109cc3",
+          "githubTag": "1.0.104",
+          "githubUrl": "https://github.com/dtolnay/anyhow",
+          "source": "lsp",
+          "install_path": "/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anyhow-1.0.104/src/macros.rs"
+        }
       ]
     }
   ],
