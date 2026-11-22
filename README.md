@@ -1,1 +1,136 @@
-Initializing
+# Repolex Knowledge Graph of dtolnay/prettyplease
+
+RDF knowledge graph data for [dtolnay/prettyplease](https://github.com/dtolnay/prettyplease), parsed by [repolex](https://repolex.ai).
+
+> **Note**: This data is experimental and subject to change without notice.
+
+## How to use this data
+
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
+
+```bash
+cargo install --git https://github.com/repolex-ai/rlex
+```
+
+Verify the install:
+
+```bash
+rlex --help
+```
+
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
+
+To load this repo's data:
+
+```bash
+rlex download dtolnay/prettyplease
+```
+
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
+
+## Data structure
+
+All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) (`.nq.gz`), a standard RDF format that can be loaded into any triplestore or graph database.
+
+```
+.
+├── aggregate
+│   ├── ast
+│   │   └── c971184fa8c5ef5a2828196e35bd99469455b46b
+│   │       ├── chunk-001.nq.gz
+│   │       └── chunk-002.nq.gz
+│   ├── lsp
+│   │   └── c971184fa8c5ef5a2828196e35bd99469455b46b.nq.gz
+│   └── repolex
+│       └── c971184fa8c5ef5a2828196e35bd99469455b46b
+│           └── chunk-001.nq.gz
+├── blob
+│   ├── 03117d56de75371c77891aa2a176fdb0121a98e0.nq.gz
+│   ├── 0ce7e3c7a0eca644e42c1ae7935ec83048b89af5.nq.gz
+│   ├── 10a86e4b03e1fe66c192995a9a21e256c441cb28.nq.gz
+│   ├── 17648f6c8b7af8b1af27995d35bbc6c658ebb654.nq.gz
+│   ├── 1b3e91fc62648d6a4e2c0395a074513d768d85d6.nq.gz
+│   ├── 1b5ec8b78e237b5c3b3d812a7c0a6589d0f7161d.nq.gz
+│   ├── 2355d4905f95674f7d307e262fde1a5f4a0e37d1.nq.gz
+│   ├── 23a38cbb3396f15c0fa30025dfcbf1cf4c7d83e9.nq.gz
+│   ├── 2d4f9ca016b193e126927006842592cbe2d9a452.nq.gz
+│   ├── 2fc8846ecfa849e47c7b7d2e6aa9e68584847a44.nq.gz
+│   ├── 31aa79387f27e730e33d871925e152e35e428031.nq.gz
+│   ├── 3561a49b4a1cdc2f7039ad6df0b509ecc783e303.nq.gz
+│   ├── 36cd56879def619a52a032b14b8acd17fe58eb14.nq.gz
+│   ├── 37254f7d0328dbb426625acdfc6dba9b78266c91.nq.gz
+│   ├── 3c7181d8efda6f2634f4845c4d1b59f81c8449f0.nq.gz
+│   ├── 40623479ab23dd68d616cf8a130cdd309a09da4a.nq.gz
+│   ├── 44428cc60f78abd9062bc24d3655399d2824a000.nq.gz
+│   ├── 4584c48587644b3b47c07620dea9f685313e491e.nq.gz
+│   ├── 45b65d00f103c7e1c72ce568741c247b3bbaaaef.nq.gz
+│   ├── 482b3ad7d1e21c3546959ba903affa47d978831b.nq.gz
+│   ├── 4bc31dc394135fc1aa166b499d5f346bc0abfc2d.nq.gz
+│   ├── 4de520806d2dcfad7258f4ae944e8b6603b0b147.nq.gz
+│   ├── 4fc36f7468cc27f17f347499234369f3622b3b9c.nq.gz
+│   ├── 55b1b605531123de077b8d0c802f4014f7400b3f.nq.gz
+│   ├── 567c1994a430f66a3ce41f7d68de8c8864554a9d.nq.gz
+│   ├── 5b80a8709ac83162336b862d866b0c661e5849dd.nq.gz
+│   ├── 665caa324c6e1f5644d332f1b11d92059821efc8.nq.gz
+│   ├── 6c9688b147064de50dd8a640d802adb430db85c5.nq.gz
+│   ├── 6f5f3d11d3ed50270c0a9ebd5fe6f74cbd386623.nq.gz
+│   ├── 702c653f52364d1b3c9fe9765613fbdab11cebeb.nq.gz
+│   ├── 7408f54adb4de82a6032edcd7b59d89ec6eddf32.nq.gz
+│   ├── 750707701cdae985156601cc906195021ba6a6e5.nq.gz
+│   ├── 882a988ecd3ad7b84570f9d50cae40b668ea7d65.nq.gz
+│   ├── 8b5ede478f2c3b9b8da29df0f6f48cf7a8ec3d09.nq.gz
+│   ├── 8edaab883c629eb02a39d74b8f7981cef8e32564.nq.gz
+│   ├── 9e1f1da1cabc6ad37c53abc748d7e9d23210ce75.nq.gz
+│   ├── a77a14a8ec077c46dd37e3dcbb7262a875e69c26.nq.gz
+│   ├── aa6b849fcfdc159029d00d5c76afa235c3722e03.nq.gz
+│   ├── b436283f3c6969709b36f9a73c0f7a407ca573ff.nq.gz
+│   ├── bc4add6e08be24a7d67fb8a12bbcdf383b03c373.nq.gz
+│   ├── c72e087240396ef8a89f4dc27bd352f7aa01076e.nq.gz
+│   ├── c8e354503858e7e0ca75e9d0a50fc7c2b435d8f8.nq.gz
+│   ├── ca3d9803a82aa6c28ffa1c43005f38715da7ac37.nq.gz
+│   ├── ce58200e1977e8a3e4767f4b2f87ede6c9fcb458.nq.gz
+│   ├── ddb2b5feebaa6e8a04f46725ccf840e54891cb4e.nq.gz
+│   ├── e23bd120feba58567dc91ce9bc6df5a8dba46a0b.nq.gz
+│   ├── e41fd728a6f536b0e492fd962f1f9aae8d2bdb8b.nq.gz
+│   ├── e45d52e90582e7920be22493bd20bcc4aa11f489.nq.gz
+│   ├── e87968ed06ba66e9d027b00ef09a4c3009efd5c4.nq.gz
+│   ├── e9e21997b1aca0707f8749ea13c09aec66c899d2.nq.gz
+│   ├── f1eec232ccbe095d330704e55f71017d41043e72.nq.gz
+│   └── f2ad9d67352ccb7fd3d95908de80ba232940b35c.nq.gz
+├── branch
+│   └── branch.nq.gz
+├── commit
+│   └── commit.nq.gz
+├── dep
+│   └── c971184fa8c5ef5a2828196e35bd99469455b46b.nq.gz
+├── filetree
+│   └── c971184fa8c5ef5a2828196e35bd99469455b46b.nq.gz
+├── issue
+│   └── issue.nq.gz
+├── pr
+│   └── pr.nq.gz
+└── tag
+    └── tag.nq.gz
+
+15 directories, 63 files
+```
+
+| Directory | What it contains |
+|-----------|-----------------|
+| `blob/` | Per-file AST graphs, content-addressed by git blob SHA. Each file in the source repo gets its own graph. |
+| `aggregate/ast/` | Combined AST graph per parsed commit. Merges all blob graphs for a snapshot of the entire codebase at that point. |
+| `aggregate/lsp/` | Language Server Protocol enrichment: resolved symbols, definitions, references, and type information. |
+| `aggregate/dataflow/` | Interprocedural data flow edges between functions and modules. |
+| `aggregate/repolex/` | Combined graph (AST + LSP + dataflow) per commit. |
+| `commit/` | Git commit metadata (author, date, message, parent links). |
+| `branch/` | Branch metadata. |
+| `tag/` | Tag metadata. |
+| `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
+
+## Source repository
+
+[dtolnay/prettyplease](https://github.com/dtolnay/prettyplease)
+
+---
+*Parsed on 2026-11-22 by [repolex](https://repolex.ai)*
