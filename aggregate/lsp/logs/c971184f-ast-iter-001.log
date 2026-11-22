@@ -1,0 +1,7 @@
+[2026-11-22T07:14:39Z] === AST ITERATION 1 START | repo=dtolnay/prettyplease sha=c971184f ===
+[2026-11-22T07:14:39Z] [iter=1] PHASE START: ast repo=dtolnay/prettyplease sha=c971184f
+[2026-11-22T07:14:39Z] [iter=1] Building AST aggregate chunks
+[2026-11-22T07:27:06Z] [iter=1] AST chunks built count=2 triples=6342507
+[2026-11-22T07:27:06Z] [iter=1] AST .complete marker written path=/home/runner/work/forx/forx/storage/aggregate/ast/c971184fa8c5ef5a2828196e35bd99469455b46b/.complete
+[2026-11-22T07:27:06Z] [iter=1] PHASE END: ast elapsed_s=747 elapsed_min=12.5
+[2026-11-22T07:27:06Z] [iter=1] Wrote .next-action.json next_action=enrich path=/home/runner/work/forx/forx/storage/aggregate/.next-action.json
